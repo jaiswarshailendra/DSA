@@ -1,0 +1,62 @@
+'''
+# Sorting Array
+a=[60,30,20,50,10]
+b=0
+for i in range(len(a)):
+    for j in range(i+1,len(a)):
+        if a[i]>a[j]:
+            b=a[i]
+            a[i]=a[j]
+            a[j]=b
+
+print(a)
+
+# Array rotation 
+a1=int(input('Enter the length of array: '))
+print('Enter the Elements:')
+a3=[]
+for i in range(a1):
+    a3+=list(map(int,input(f'Enter {(i+1)} element: ').split()))
+
+a4=int(input('Enter the index of rotation: '))
+a5=a3[:]
+def aa(a2):
+    for i in range(a4):
+        temp1=a2[-1]
+        temp2=a2[:-1]
+        a2[0]=temp1
+        a2[1:]=temp2
+    return a2
+
+print(f'Array after right rotation {aa(a5)}')
+a6=a3[:]
+def bb(a2):
+    for j in range(a4):
+        temp1=a2[0]
+        temp2=a2[1:]
+        a2[:-1]=temp2
+        a2[-1]=temp1
+    
+    return a2
+print(f'Array after left rotation {bb(a6)}')
+
+# Reverse Array
+def a(b):
+    for i in range(len(b)):
+        temp1=b[-1]
+        temp2=b[i:-1]
+        b[i]=temp1
+        b[i+1:]=temp2
+    print(b)
+
+
+
+
+l1=[1,2,3,4,5,6,7]
+a(l1)
+l1=['India', 'UK', 'Japan', 'Australia']
+a(l1)
+'''
+# Find Pairs in Array with Given Sum in python
+def a(z):
+    pass
